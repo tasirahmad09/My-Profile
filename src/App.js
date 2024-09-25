@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AboutSection from "./components/About";
+import ServicesSection from "./components/Services";
+import SkillsSection from "./components/Skills";
+import ResumeSection from "./components/Resume";
+import WeaponsSection from "./components/Weapons";
+import ContactSection from "./components/Contact";
+import ProgressNav from "./components/Nav";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App body-piling">
+      <div className="wrapper">
+        {/* <!-- Preloader --> */}
+        <div className="preloader"></div>
+        <Header />
+        <div id="content">
+          <div className="a-pagepiling full-page">
+            <AboutSection />
+            <ServicesSection />
+            <SkillsSection />
+            <ResumeSection />
+            <WeaponsSection />
+            <ContactSection />
+            <ProgressNav />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
